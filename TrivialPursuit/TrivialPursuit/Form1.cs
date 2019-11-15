@@ -13,12 +13,13 @@ namespace TrivialPursuit
         }   
 
         string _nomOrdi;
-        SqlConnection conn = new SqlConnection();
+        public SqlConnection conn = new SqlConnection();
 
 
         private void btn_start_Click(object sender, EventArgs e)
         {
             ConnectionBD();
+            ChangeForm();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,7 +37,13 @@ namespace TrivialPursuit
 
             conn.ConnectionString = dSource;
             conn.Open();
-            lbl_test.Text = conn.State.ToString();
+        }
+
+        private void ChangeForm()
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }

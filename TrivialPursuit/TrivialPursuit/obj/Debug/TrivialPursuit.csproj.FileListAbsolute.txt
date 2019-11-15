@@ -7,3 +7,4 @@ F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialP
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csproj.GenerateResource.cache
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.exe
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.pdb
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Form2.resources

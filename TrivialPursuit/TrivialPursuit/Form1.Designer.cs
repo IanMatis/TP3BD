@@ -38,7 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_motDePasse = new System.Windows.Forms.TextBox();
             this.txt_compte = new System.Windows.Forms.TextBox();
-            this.lbl_test = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_start
@@ -111,8 +110,10 @@
             this.txt_motDePasse.Location = new System.Drawing.Point(151, 67);
             this.txt_motDePasse.Margin = new System.Windows.Forms.Padding(6);
             this.txt_motDePasse.Name = "txt_motDePasse";
+            this.txt_motDePasse.PasswordChar = '•';
             this.txt_motDePasse.Size = new System.Drawing.Size(259, 29);
             this.txt_motDePasse.TabIndex = 7;
+            this.txt_motDePasse.Text = "12";
             // 
             // txt_compte
             // 
@@ -121,22 +122,13 @@
             this.txt_compte.Name = "txt_compte";
             this.txt_compte.Size = new System.Drawing.Size(259, 29);
             this.txt_compte.TabIndex = 8;
-            // 
-            // lbl_test
-            // 
-            this.lbl_test.AutoSize = true;
-            this.lbl_test.Location = new System.Drawing.Point(335, 241);
-            this.lbl_test.Name = "lbl_test";
-            this.lbl_test.Size = new System.Drawing.Size(38, 24);
-            this.lbl_test.TabIndex = 9;
-            this.lbl_test.Text = "test";
+            this.txt_compte.Text = "bigbinotte";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 302);
-            this.Controls.Add(this.lbl_test);
             this.Controls.Add(this.txt_compte);
             this.Controls.Add(this.txt_motDePasse);
             this.Controls.Add(this.label4);
@@ -169,7 +161,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_motDePasse;
         private System.Windows.Forms.TextBox txt_compte;
-        private System.Windows.Forms.Label lbl_test;
     }
 }
 
