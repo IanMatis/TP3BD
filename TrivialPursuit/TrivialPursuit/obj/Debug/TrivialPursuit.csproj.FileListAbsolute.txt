@@ -1,0 +1,9 @@
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\bin\Debug\TrivialPursuit.exe.config
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\bin\Debug\TrivialPursuit.exe
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\bin\Debug\TrivialPursuit.pdb
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csprojAssemblyReference.cache
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Form1.resources
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Properties.Resources.resources
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csproj.GenerateResource.cache
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.exe
+F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.pdb
