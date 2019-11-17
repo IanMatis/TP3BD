@@ -125,13 +125,13 @@ insert into Questions(enonceQuestion,idCategorie) values('En quelle année le jeu
 insert into Questions(enonceQuestion,idCategorie) values('Quel oiseau est un symbole international de paix ?',4);
 insert into Questions(enonceQuestion,idCategorie) values('Quelle espèce de rhinocéros n’existe pas ?',4);
 insert into Questions(enonceQuestion,idCategorie) values('La libellule est un insecte que l’on rencontre surtout :',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
-insert into Questions(enonceQuestion,idCategorie) values('',4);
+insert into Questions(enonceQuestion,idCategorie) values('Combien de yeux une araignee possede t-elle ?',4);
+insert into Questions(enonceQuestion,idCategorie) values('A quelle vitesse peut courir une autruche ?',4);
+insert into Questions(enonceQuestion,idCategorie) values('La vipère est un serpent venimeux mais elle a elle-même des ennemis. Son plus grand ennemi est :',4);
+insert into Questions(enonceQuestion,idCategorie) values('Le cou de la girafe est très long. Combien de vertèbres cervicales comporte-t-il ? ',4);
+insert into Questions(enonceQuestion,idCategorie) values('Quel animal nous donne le jambon ?',4);
+insert into Questions(enonceQuestion,idCategorie) values('Certains oiseaux, comme le colibri, peuvent :',4);
+insert into Questions(enonceQuestion,idCategorie) values('Où se trouve l’aiguillon du scorpion qui sécrète le venin ?',4);
 
 --insert into Reponses
 
@@ -275,33 +275,33 @@ insert into Reponses(enonceReponse,estBonne,idQuestion) values('Au bord de l’eau
 insert into Reponses(enonceReponse,estBonne,idQuestion) values('Dans la forêt',0,33);
 insert into Reponses(enonceReponse,estBonne,idQuestion) values('Dans la montagne',0,33);
 --Q34
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,34);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,34);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,34);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('2',0,34);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('4',0,34);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('8',1,34);
 --Q35
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,35);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,35);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,35);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('70 km/h',1,35);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('15 km/h',0,35);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('95 km/h',0,35);
 --Q36
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,36);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,36);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,36);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Le renard',0,36);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Le blaireau',0,36);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('L homme',1,36);
 --Q37
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,37);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,37);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,37);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('2',0,37);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('7',1,37);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('25',0,37);
 --Q38
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,38);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,38);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,38);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Le porc',1,38);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('La vache',0,38);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Le cheval',0,38);
 --Q39
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,39);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,39);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,39);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Voler sur place',1,39);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Flotter',0,39);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Surnager',0,39);
 --Q40
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,40);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,40);
-insert into Reponses(enonceReponse,estBonne,idQuestion) values('',0,40);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Au bout de sa langue',0,40);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Sur sa tete',0,40);
+insert into Reponses(enonceReponse,estBonne,idQuestion) values('Au bout de sa queue',1,40);
 
 
 --Select all
