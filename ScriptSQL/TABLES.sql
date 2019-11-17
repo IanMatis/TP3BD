@@ -1,4 +1,4 @@
-create database TrivialPursuitBD;
+--create database TrivialPursuitBD;
 use TrivialPursuitBD;
 
 --Drop tables
@@ -62,6 +62,4 @@ select * from Categories;
 select * from Score;
 select * from Questions;
 select * from Reponses;
-
-
 
