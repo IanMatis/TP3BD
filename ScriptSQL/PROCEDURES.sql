@@ -30,6 +30,7 @@ select * from Score;
 select * from Questions;
 select * from Reponses;
 
+--TEST
 execute insertJoueur
 @alias = 'vex0272',
 @nom = 'M2',
