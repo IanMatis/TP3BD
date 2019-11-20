@@ -9,7 +9,7 @@ create procedure insertJoueur(@alias varchar(60),@nom varchar(60),@prenom varcha
 as 
 begin
 	insert into Joueurs(Alias,nom,prenom) values(@alias,@nom,@prenom);
-
+	
 	declare @nbCategories int,@idJ int,@cnt int = 1;
 	select @nbCategories = count(idCategorie) from Categories;
 	select @idJ = idJoueur from Joueurs where Alias = @alias;
@@ -35,3 +35,5 @@ execute insertJoueur
 @alias = 'vex0272',
 @nom = 'M2',
 @prenom = 'F2';
+
+

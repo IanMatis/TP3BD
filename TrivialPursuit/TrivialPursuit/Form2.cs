@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace TrivialPursuit
 {
@@ -12,7 +13,6 @@ namespace TrivialPursuit
             InitializeComponent();
         }
 
-        Form1 form1 = new Form1();
         Random r = new Random();
         int tourJoueur = 1;
 
@@ -22,15 +22,15 @@ namespace TrivialPursuit
         {
             if (tourJoueur == 1)
             {
-                lbl_tourJoueur.Text = "Tour du joueur 1" ;
+                lbl_tourJoueur.Text = "Tour de: " + Form1.Joueur1;
                 tourJoueur = 2;
             }
             else if (tourJoueur == 2)
             {
-                lbl_tourJoueur.Text = "Tour du joueur 2";
+                lbl_tourJoueur.Text = "Tour de: " + Form1.Joueur2;
                 tourJoueur = 1;
             }
-            SqlConnection conn = form1.conn;
+            SqlConnection conn = Form1.conn;
         }
 
         private void CategorieChoisi()
@@ -39,13 +39,26 @@ namespace TrivialPursuit
 
             if (couleur == 1)
             {
-                //btn_play.BackColor
+                btn_play.BackColor = Color.Red;
+            }
+            else if (couleur == 2)
+            {
+                btn_play.BackColor = Color.Blue;
+            }
+            else if (couleur == 3)
+            {
+                btn_play.BackColor = Color.Green;
+            }
+            else
+            {
+                btn_play.BackColor = Color.Yellow;
             }
         }
 
         private void btn_play_Click(object sender, EventArgs e)
         {
             TourJoueur();
+            CategorieChoisi();
         }
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
