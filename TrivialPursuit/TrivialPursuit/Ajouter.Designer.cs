@@ -1,6 +1,6 @@
 ﻿namespace TrivialPursuit
 {
-    partial class Form3
+    partial class frm_ajouter
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,7 @@
             this.btn_ajouter.UseVisualStyleBackColor = true;
             this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
-            // Form3
+            // frm_ajouter
             // 
             this.AcceptButton = this.btn_ajouter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -112,10 +112,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Name = "Form3";
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "frm_ajouter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Ajouter un Joueur";
             this.ResumeLayout(false);
             this.PerformLayout();
 

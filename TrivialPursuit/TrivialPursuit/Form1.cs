@@ -21,11 +21,19 @@ namespace TrivialPursuit
         private void btn_start_Click(object sender, EventArgs e)
         {
             Joueur1 = cmb_joueur1.Text;
-            Joueur2 = cmb_joueur1.Text;
-
-            this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
+            Joueur2 = cmb_joueur2.Text;
+            if (Joueur1 != "" && Joueur2 != "")
+            {
+                this.Hide();
+                Form2 form2 = new Form2();
+                form2.Show();
+                lbl_erreur.Hide();
+            }
+            else
+            {
+                lbl_erreur.Show();
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,10 +45,10 @@ namespace TrivialPursuit
 
         private void btn_addJoueur_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.ShowDialog();
+            frm_ajouter ajouterJoueur = new frm_ajouter();
+            ajouterJoueur.ShowDialog();
         }
-        private void ShowProgrammes()
+        public void ShowJoueurs()
         {
             string getJoueurs = $"select Alias from Joueurs;";
 
@@ -74,5 +82,10 @@ namespace TrivialPursuit
             conn.Open();
         }
 
+        private void btn_deleteJoueur_Click(object sender, EventArgs e)
+        {
+            frm_delete deleteJoueur = new frm_delete();
+            deleteJoueur.ShowDialog();
+        }
     }
 }

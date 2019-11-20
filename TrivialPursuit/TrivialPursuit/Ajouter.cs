@@ -5,9 +5,9 @@ using System.Data.SqlClient;
 
 namespace TrivialPursuit
 {
-    public partial class Form3 : Form
+    public partial class frm_ajouter : Form
     {
-        public Form3()
+        public frm_ajouter()
         {
             InitializeComponent();
         }
