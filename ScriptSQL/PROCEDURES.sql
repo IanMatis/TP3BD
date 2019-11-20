@@ -40,6 +40,7 @@ end;
 
 go
 
+--cherche les 4 reponses a une question
 create procedure chercherReponse(@idQuestion int)
 as 
 begin
@@ -49,6 +50,7 @@ end;
 
 go
 
+--prend le id de la reponse et retourne son etat 
 create function validerReponse(@idReponse int) returns int
 as 
 begin
@@ -56,6 +58,24 @@ begin
 	select @flag = estBonne from Reponses where idReponse = @idReponse;
 	return @flag;
 end;
+
+go
+
+--@reponse est la valeur que la fonction validerReponse retourne
+create procedure mettreAJourScore(@reponse int,@idJoueur int,@idCategorie int)
+as 
+begin	
+	if(@reponse = 0)
+		update Score set nbMauvaiseReponses += 1 where idJoueur = @idJoueur and idCategorie = @idCategorie;
+	else
+		update Score set nbBonneReponses += 1 where idJoueur = @idJoueur and idCategorie = @idCategorie;
+end;
+
+
+
+
+
+
 
 
 --Select all
@@ -75,8 +95,15 @@ execute chercherQuestion
 @idCat = 1;
 
 execute chercherReponse
-@idQuestion = 8;
+@idQuestion = 1;
 
 --30   0
 --31   1
+--marche meme si cest rouge
 select dbo.validerReponse(31) as Etat;
+
+--Test mettreAJourScore
+execute mettreAJourScore
+@reponse = 0, -- 0 = mauvais/ 1 = bon
+@idJoueur = 3,
+@idCategorie = 1;
