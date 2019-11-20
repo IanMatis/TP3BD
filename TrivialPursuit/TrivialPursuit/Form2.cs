@@ -35,23 +35,28 @@ namespace TrivialPursuit
 
         private void CategorieChoisi()
         {
-            int couleur = r.Next(1, 5);
+            int couleur = r.Next(1, 6);
 
             if (couleur == 1)
             {
-                btn_play.BackColor = Color.Red;
+                btn_play.BackColor = Color.Orange;
             }
             else if (couleur == 2)
             {
-                btn_play.BackColor = Color.Blue;
+                btn_play.BackColor = Color.Yellow;
             }
             else if (couleur == 3)
             {
-                btn_play.BackColor = Color.Green;
+                btn_play.BackColor = Color.Blue;
+
+            }
+            else if (couleur == 4)
+            {
+                btn_play.BackColor = Color.Purple;
             }
             else
             {
-                btn_play.BackColor = Color.Yellow;
+                btn_play.BackColor = Color.White;
             }
         }
 
@@ -64,6 +69,11 @@ namespace TrivialPursuit
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

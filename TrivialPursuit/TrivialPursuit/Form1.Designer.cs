@@ -37,6 +37,8 @@
             this.btn_addJoueur = new System.Windows.Forms.Button();
             this.cmb_joueur1 = new System.Windows.Forms.ComboBox();
             this.cmb_joueur2 = new System.Windows.Forms.ComboBox();
+            this.lbl_erreur = new System.Windows.Forms.Label();
+            this.btn_deleteJoueur = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_start
@@ -72,7 +74,7 @@
             // 
             // txt_motDePasse
             // 
-            this.txt_motDePasse.Location = new System.Drawing.Point(529, 353);
+            this.txt_motDePasse.Location = new System.Drawing.Point(461, 78);
             this.txt_motDePasse.Margin = new System.Windows.Forms.Padding(6);
             this.txt_motDePasse.Name = "txt_motDePasse";
             this.txt_motDePasse.PasswordChar = '•';
@@ -83,7 +85,7 @@
             // 
             // txt_compte
             // 
-            this.txt_compte.Location = new System.Drawing.Point(529, 384);
+            this.txt_compte.Location = new System.Drawing.Point(461, 105);
             this.txt_compte.Margin = new System.Windows.Forms.Padding(6);
             this.txt_compte.Name = "txt_compte";
             this.txt_compte.Size = new System.Drawing.Size(90, 29);
@@ -93,7 +95,7 @@
             // 
             // btn_addJoueur
             // 
-            this.btn_addJoueur.Location = new System.Drawing.Point(323, 264);
+            this.btn_addJoueur.Location = new System.Drawing.Point(349, 143);
             this.btn_addJoueur.Name = "btn_addJoueur";
             this.btn_addJoueur.Size = new System.Drawing.Size(160, 61);
             this.btn_addJoueur.TabIndex = 9;
@@ -103,6 +105,8 @@
             // 
             // cmb_joueur1
             // 
+            this.cmb_joueur1.BackColor = System.Drawing.Color.White;
+            this.cmb_joueur1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_joueur1.FormattingEnabled = true;
             this.cmb_joueur1.Location = new System.Drawing.Point(100, 23);
             this.cmb_joueur1.Name = "cmb_joueur1";
@@ -111,18 +115,43 @@
             // 
             // cmb_joueur2
             // 
+            this.cmb_joueur2.BackColor = System.Drawing.SystemColors.Control;
+            this.cmb_joueur2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_joueur2.FormattingEnabled = true;
             this.cmb_joueur2.Location = new System.Drawing.Point(100, 73);
             this.cmb_joueur2.Name = "cmb_joueur2";
             this.cmb_joueur2.Size = new System.Drawing.Size(260, 32);
             this.cmb_joueur2.TabIndex = 11;
             // 
+            // lbl_erreur
+            // 
+            this.lbl_erreur.AutoSize = true;
+            this.lbl_erreur.ForeColor = System.Drawing.Color.Red;
+            this.lbl_erreur.Location = new System.Drawing.Point(366, 26);
+            this.lbl_erreur.Name = "lbl_erreur";
+            this.lbl_erreur.Size = new System.Drawing.Size(160, 48);
+            this.lbl_erreur.TabIndex = 12;
+            this.lbl_erreur.Text = "Vous devez avoir \r\n2 joueurs\r\n";
+            this.lbl_erreur.Visible = false;
+            // 
+            // btn_deleteJoueur
+            // 
+            this.btn_deleteJoueur.Location = new System.Drawing.Point(349, 214);
+            this.btn_deleteJoueur.Name = "btn_deleteJoueur";
+            this.btn_deleteJoueur.Size = new System.Drawing.Size(160, 61);
+            this.btn_deleteJoueur.TabIndex = 13;
+            this.btn_deleteJoueur.Text = "Enlever Joueur";
+            this.btn_deleteJoueur.UseVisualStyleBackColor = true;
+            this.btn_deleteJoueur.Click += new System.EventHandler(this.btn_deleteJoueur_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.btn_start;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 417);
+            this.ClientSize = new System.Drawing.Size(556, 287);
+            this.Controls.Add(this.btn_deleteJoueur);
+            this.Controls.Add(this.lbl_erreur);
             this.Controls.Add(this.cmb_joueur2);
             this.Controls.Add(this.cmb_joueur1);
             this.Controls.Add(this.btn_addJoueur);
@@ -153,6 +182,8 @@
         private System.Windows.Forms.Button btn_addJoueur;
         private System.Windows.Forms.ComboBox cmb_joueur1;
         private System.Windows.Forms.ComboBox cmb_joueur2;
+        private System.Windows.Forms.Label lbl_erreur;
+        private System.Windows.Forms.Button btn_deleteJoueur;
     }
 }
 
