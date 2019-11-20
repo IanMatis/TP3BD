@@ -8,22 +8,22 @@ insert into Joueurs(Alias,nom,prenom) values('Bigbinotte','I','L');
 --insert into Categories									
 insert into Categories(nomCategorie,Couleur) values('Sport','O');--Orange
 insert into Categories(nomCategorie,Couleur) values('Anime','J');--Jaune
-insert into Categories(nomCategorie,Couleur) values('Jeu Vidéo','B');--Bleu
-insert into Categories(nomCategorie,Couleur) values('Art-Culture','V');--Violet
+insert into Categories(nomCategorie,Couleur) values('Jeu Video','B');--Bleu
+insert into Categories(nomCategorie,Couleur) values('Animaux','V');--Violet
 
 --insert into Score
 --cree un trigger sur Joueur quand un est insert cree un Score pour ce Joueur
 --Score pour le joueur 1
-insert into Score(idCategorie,idJoueur) values(1,1);
-insert into Score(idCategorie,idJoueur) values(2,1);
-insert into Score(idCategorie,idJoueur) values(3,1);
-insert into Score(idCategorie,idJoueur) values(4,1);
+--insert into Score(idCategorie,idJoueur) values(1,1);
+--insert into Score(idCategorie,idJoueur) values(2,1);
+--insert into Score(idCategorie,idJoueur) values(3,1);
+--insert into Score(idCategorie,idJoueur) values(4,1);
 --
 --Score pour le joueur 2
-insert into Score(idCategorie,idJoueur) values(1,2);
-insert into Score(idCategorie,idJoueur) values(2,2);
-insert into Score(idCategorie,idJoueur) values(3,2);
-insert into Score(idCategorie,idJoueur) values(4,2);
+--insert into Score(idCategorie,idJoueur) values(1,2);
+--insert into Score(idCategorie,idJoueur) values(2,2);
+--insert into Score(idCategorie,idJoueur) values(3,2);
+--insert into Score(idCategorie,idJoueur) values(4,2);
 
 --insert into Questions
 --Question de Sport Orange
