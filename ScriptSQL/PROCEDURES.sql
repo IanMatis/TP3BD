@@ -49,7 +49,7 @@ end;
 
 go
 
-create function validerReponse(@idReponse int) return int
+create function validerReponse(@idReponse int) returns int
 as 
 begin
 	declare @flag int = 0;
@@ -76,3 +76,7 @@ execute chercherQuestion
 
 execute chercherReponse
 @idQuestion = 8;
+
+--30   0
+--31   1
+select dbo.validerReponse(31) as Etat;
