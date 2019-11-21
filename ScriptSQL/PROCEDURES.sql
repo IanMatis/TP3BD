@@ -93,13 +93,24 @@ go
 create procedure afficherCatPlusFaible(@idJoueur int)
 as 
 begin	
-	select Alias,nomCategorie,s.nbBonneReponses from Score s join Joueurs j on s.idJoueur = j.idJoueur 
+	select TOP 1 Alias,nomCategorie,s.nbBonneReponses from Score s join Joueurs j on s.idJoueur = j.idJoueur 
 										   join Categories c on s.idCategorie = c.idCategorie   
 	where s.idJoueur = @idJoueur
 	order by s.nbBonneReponses asc;
 end;
 
+go
 
+--Reset les score et les flags des reponses
+create procedure restartGame
+as
+begin
+	update Score set nbBonneReponses = 0;
+	update Score set nbMauvaiseReponses = 0;
+	update Questions set flag = 0;
+end;
+
+go
 
 --Select all
 select * from Joueurs;
@@ -117,7 +128,7 @@ execute insertJoueur
 
 -- chercherQuestion
 execute chercherQuestion
-@idCat = 1;
+@idCat = 4;
 
 -- chercherReponse
 execute chercherReponse
@@ -126,13 +137,13 @@ execute chercherReponse
 --30   0
 --31   1
 --marche meme si cest rouge
-select dbo.validerReponse(31) as Etat;
+select dbo.validerReponse(11) as Etat;
 
 --Test mettreAJourScore
 execute mettreAJourScore
 @reponse = 1, -- 0 = mauvais/ 1 = bon
 @idJoueur = 3,
-@idCategorie = 1;
+@idCategorie = 3;
 
 --Test afficherCategorieGagne
 execute afficherCategorieGagne
@@ -142,3 +153,6 @@ execute afficherCategorieGagne
 --Test afficherCatPlusFaible
 execute afficherCatPlusFaible
 @idJoueur = 3;
+
+--Reset les score et les flags des reponses
+execute restartGame;
