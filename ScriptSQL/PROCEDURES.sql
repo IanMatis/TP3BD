@@ -71,9 +71,18 @@ begin
 		update Score set nbBonneReponses += 1 where idJoueur = @idJoueur and idCategorie = @idCategorie;
 end;
 
+go
 
+--affiche lalias et les categorie gagner avec le id d'un joueur
+create procedure afficherCategorieGagne(@idJoueur int)
+as 
+begin	
+	select Alias,nomCategorie from Score s join Joueurs j on s.idJoueur = j.idJoueur 
+										   join Categories c on s.idCategorie = c.idCategorie   
+	where s.nbBonneReponses >= 3 and s.idJoueur = @idJoueur;
+end;
 
-
+go
 
 
 
@@ -86,14 +95,17 @@ select * from Questions;
 select * from Reponses;
 
 --TEST
+--Ajouter un joueur et cree son score dans la bd
 execute insertJoueur
 @alias = 'vex0272',
 @nom = 'M2',
 @prenom = 'F2';
---
+
+-- chercherQuestion
 execute chercherQuestion
 @idCat = 1;
 
+-- chercherReponse
 execute chercherReponse
 @idQuestion = 1;
 
@@ -104,6 +116,13 @@ select dbo.validerReponse(31) as Etat;
 
 --Test mettreAJourScore
 execute mettreAJourScore
-@reponse = 0, -- 0 = mauvais/ 1 = bon
+@reponse = 1, -- 0 = mauvais/ 1 = bon
 @idJoueur = 3,
 @idCategorie = 1;
+
+--Test afficherCategorieGagne
+execute afficherCategorieGagne
+@idJoueur = 3;
+
+
+
