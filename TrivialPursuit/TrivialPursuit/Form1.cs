@@ -40,13 +40,21 @@ namespace TrivialPursuit
         {
             _nomOrdi = Environment.MachineName;
             ConnectionBD();
-            ShowProgrammes();
+            ShowJoueurs();
         }
 
         private void btn_addJoueur_Click(object sender, EventArgs e)
         {
             frm_ajouter ajouterJoueur = new frm_ajouter();
+            this.Hide();
             ajouterJoueur.ShowDialog();
+        }
+
+        private void btn_deleteJoueur_Click(object sender, EventArgs e)
+        {
+            frm_delete deleteJoueur = new frm_delete();
+            this.Hide();
+            deleteJoueur.ShowDialog();
         }
         public void ShowJoueurs()
         {
@@ -72,7 +80,7 @@ namespace TrivialPursuit
         }
         private void ConnectionBD()
         {
-            string source = $"{_nomOrdi}\\SQLEXPRESS2017";
+            string source = $"{_nomOrdi}\\SQLEXPRESS";
             string bd = "TrivialPursuitBD";
             string user = txt_compte.Text;
             string pw = txt_motDePasse.Text;
@@ -82,10 +90,11 @@ namespace TrivialPursuit
             conn.Open();
         }
 
-        private void btn_deleteJoueur_Click(object sender, EventArgs e)
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frm_delete deleteJoueur = new frm_delete();
-            deleteJoueur.ShowDialog();
+            Application.Exit();
         }
+
+
     }
 }

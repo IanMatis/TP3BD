@@ -9,3 +9,16 @@ F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialP
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.pdb
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Form2.resources
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Form3.resources
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\bin\Debug\TrivialPursuit.exe.config
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\bin\Debug\TrivialPursuit.exe
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\bin\Debug\TrivialPursuit.pdb
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csprojAssemblyReference.cache
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.frm_delete.resources
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Form1.resources
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Form2.resources
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.frm_ajouter.resources
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.Properties.Resources.resources
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csproj.GenerateResource.cache
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csproj.CoreCompileInputs.cache
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.exe
+H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.pdb

@@ -14,15 +14,25 @@ namespace TrivialPursuit
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
-            AjouterJoueur();
-            this.Hide();
-        }
-
-        private void AjouterJoueur()
-        {
             string alias = txt_alias.Text;
             string nom = txt_prenom.Text;
             string prenom = txt_nom.Text;
+
+            if (alias != "" && nom != "" && prenom != "")
+            {
+                AjouterJoueur(alias, nom, prenom);
+                this.Hide();
+                ReloadForm();
+            }
+            else
+            {
+                lbl_erreur.Show();
+            }
+        }
+
+        private void AjouterJoueur(string alias, string nom, string prenom)
+        {
+            
             SqlCommand ajouterJoueur = new SqlCommand("insertJoueur", Form1.conn);
             ajouterJoueur.CommandText = "insertJoueur";
             ajouterJoueur.CommandType = CommandType.StoredProcedure;
@@ -46,6 +56,18 @@ namespace TrivialPursuit
 
 
             //totalEtudiants();//refresh le total d'etudiants apres un ajout
+        }
+
+        private void frm_ajouter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReloadForm();
+        }
+
+        private void ReloadForm()
+        {
+            Form1.conn.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
         }
     }
 }

@@ -28,6 +28,18 @@ end;
 
 go
 
+create procedure deleteJoueur(@alias varchar(60))
+as 
+begin
+		declare @id int;
+		select @id = idJoueur from Joueurs where @alias = alias;
+
+		delete from Score where @id = idJoueur;
+		delete from Joueurs where @id = idJoueur;
+end;
+
+go
+
 --Remet a zero tout ce qui est utile dans la partie
 create procedure chercherQuestion(@idCat int)
 as 

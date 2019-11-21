@@ -35,6 +35,7 @@
             this.txt_prenom = new System.Windows.Forms.TextBox();
             this.txt_nom = new System.Windows.Forms.TextBox();
             this.btn_ajouter = new System.Windows.Forms.Button();
+            this.lbl_erreur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -90,7 +91,7 @@
             // 
             // btn_ajouter
             // 
-            this.btn_ajouter.Location = new System.Drawing.Point(87, 205);
+            this.btn_ajouter.Location = new System.Drawing.Point(84, 205);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(228, 62);
             this.btn_ajouter.TabIndex = 6;
@@ -98,12 +99,24 @@
             this.btn_ajouter.UseVisualStyleBackColor = true;
             this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
+            // lbl_erreur
+            // 
+            this.lbl_erreur.AutoSize = true;
+            this.lbl_erreur.ForeColor = System.Drawing.Color.Red;
+            this.lbl_erreur.Location = new System.Drawing.Point(53, 179);
+            this.lbl_erreur.Name = "lbl_erreur";
+            this.lbl_erreur.Size = new System.Drawing.Size(313, 24);
+            this.lbl_erreur.TabIndex = 7;
+            this.lbl_erreur.Text = "Vous devez remplir les trois champs";
+            this.lbl_erreur.Visible = false;
+            // 
             // frm_ajouter
             // 
             this.AcceptButton = this.btn_ajouter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 279);
+            this.Controls.Add(this.lbl_erreur);
             this.Controls.Add(this.btn_ajouter);
             this.Controls.Add(this.txt_nom);
             this.Controls.Add(this.txt_prenom);
@@ -116,6 +129,7 @@
             this.Name = "frm_ajouter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajouter un Joueur";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_ajouter_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +144,6 @@
         private System.Windows.Forms.TextBox txt_prenom;
         private System.Windows.Forms.TextBox txt_nom;
         private System.Windows.Forms.Button btn_ajouter;
+        private System.Windows.Forms.Label lbl_erreur;
     }
 }

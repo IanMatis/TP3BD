@@ -18,6 +18,43 @@ namespace TrivialPursuit
             InitializeComponent();
         }
 
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (cmb_alias.Text != "")
+            {
+                DeleteJoueur();
+                this.Hide();
+                ReloadForm();
+            }
+            else
+            {
+                lbl_erreur.Show();
+            }
+
+        }
+
+        private void frm_delete_Load(object sender, EventArgs e)
+        {
+            ShowAlias();
+        }
+
+        private void frm_delete_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReloadForm();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReloadForm();
+        }
+
+        private void ReloadForm()
+        {
+            Form1.conn.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
 
         public void ShowAlias()
         {
@@ -41,15 +78,24 @@ namespace TrivialPursuit
             }
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void DeleteJoueur()
         {
+            string alias = cmb_alias.Text;
 
+            SqlCommand deleteJoueur = new SqlCommand("deleteJoueur", Form1.conn);
+            deleteJoueur.CommandText = "deleteJoueur";
+            deleteJoueur.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter paramAlias = new SqlParameter("@alias", SqlDbType.VarChar, 60);
+            paramAlias.Direction = ParameterDirection.Input;
+
+
+            paramAlias.Value = alias;
+
+            deleteJoueur.Parameters.Add(paramAlias);
+            deleteJoueur.ExecuteNonQuery();
         }
 
-        private void frm_delete_Load(object sender, EventArgs e)
-        {
-            ShowAlias();
-        }
     }
 
 
