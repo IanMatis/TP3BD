@@ -2,6 +2,11 @@ use TrivialPursuitBD;
 
 drop procedure if exists insertJoueur;
 drop procedure if exists chercherQuestion;
+drop procedure if exists chercherReponse;
+drop procedure if exists validerReponse;
+drop procedure if exists mettreAJourScore;
+drop procedure if exists afficherCategorieGagne;
+drop procedure if exists afficherCatPlusFaible;
 go
 
 --Cree le joueur et son tableau de score en meme temps
@@ -84,6 +89,15 @@ end;
 
 go
 
+--affiche lalias et les categorie gagner avec le id d'un joueur
+create procedure afficherCatPlusFaible(@idJoueur int)
+as 
+begin	
+	select Alias,nomCategorie,s.nbBonneReponses from Score s join Joueurs j on s.idJoueur = j.idJoueur 
+										   join Categories c on s.idCategorie = c.idCategorie   
+	where s.idJoueur = @idJoueur
+	order by s.nbBonneReponses asc;
+end;
 
 
 
@@ -125,4 +139,6 @@ execute afficherCategorieGagne
 @idJoueur = 3;
 
 
-
+--Test afficherCatPlusFaible
+execute afficherCatPlusFaible
+@idJoueur = 3;
