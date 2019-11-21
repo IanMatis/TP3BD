@@ -118,7 +118,7 @@ select * from Categories;
 select * from Score;
 select * from Questions;
 select * from Reponses;
-
+/*
 --TEST
 --Ajouter un joueur et cree son score dans la bd
 execute insertJoueur
@@ -149,10 +149,11 @@ execute mettreAJourScore
 execute afficherCategorieGagne
 @idJoueur = 3;
 
-
 --Test afficherCatPlusFaible
 execute afficherCatPlusFaible
 @idJoueur = 3;
 
 --Reset les score et les flags des reponses
 execute restartGame;
+
+*/
