@@ -55,12 +55,12 @@
             this.btn_j2 = new System.Windows.Forms.Button();
             this.btn_o2 = new System.Windows.Forms.Button();
             this.lbl_question = new System.Windows.Forms.Label();
-            this.lbl_test = new System.Windows.Forms.Label();
+            this.lbl_winner = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_play
             // 
-            this.btn_play.Location = new System.Drawing.Point(678, 12);
+            this.btn_play.Location = new System.Drawing.Point(513, 27);
             this.btn_play.Name = "btn_play";
             this.btn_play.Size = new System.Drawing.Size(99, 87);
             this.btn_play.TabIndex = 0;
@@ -71,7 +71,7 @@
             // lbl_tourJoueur
             // 
             this.lbl_tourJoueur.AutoSize = true;
-            this.lbl_tourJoueur.Location = new System.Drawing.Point(12, 192);
+            this.lbl_tourJoueur.Location = new System.Drawing.Point(23, 192);
             this.lbl_tourJoueur.Name = "lbl_tourJoueur";
             this.lbl_tourJoueur.Size = new System.Drawing.Size(61, 13);
             this.lbl_tourJoueur.TabIndex = 1;
@@ -175,7 +175,7 @@
             // 
             // btn_rep1
             // 
-            this.btn_rep1.Location = new System.Drawing.Point(175, 294);
+            this.btn_rep1.Location = new System.Drawing.Point(81, 274);
             this.btn_rep1.Name = "btn_rep1";
             this.btn_rep1.Size = new System.Drawing.Size(225, 75);
             this.btn_rep1.TabIndex = 10;
@@ -184,7 +184,7 @@
             // 
             // btn_rep2
             // 
-            this.btn_rep2.Location = new System.Drawing.Point(406, 294);
+            this.btn_rep2.Location = new System.Drawing.Point(312, 274);
             this.btn_rep2.Name = "btn_rep2";
             this.btn_rep2.Size = new System.Drawing.Size(225, 75);
             this.btn_rep2.TabIndex = 11;
@@ -193,7 +193,7 @@
             // 
             // btn_rep3
             // 
-            this.btn_rep3.Location = new System.Drawing.Point(175, 375);
+            this.btn_rep3.Location = new System.Drawing.Point(81, 355);
             this.btn_rep3.Name = "btn_rep3";
             this.btn_rep3.Size = new System.Drawing.Size(225, 75);
             this.btn_rep3.TabIndex = 12;
@@ -202,7 +202,7 @@
             // 
             // btn_rep4
             // 
-            this.btn_rep4.Location = new System.Drawing.Point(406, 375);
+            this.btn_rep4.Location = new System.Drawing.Point(312, 355);
             this.btn_rep4.Name = "btn_rep4";
             this.btn_rep4.Size = new System.Drawing.Size(225, 75);
             this.btn_rep4.TabIndex = 13;
@@ -212,7 +212,7 @@
             // lbl_joueur1
             // 
             this.lbl_joueur1.AutoSize = true;
-            this.lbl_joueur1.Location = new System.Drawing.Point(357, 37);
+            this.lbl_joueur1.Location = new System.Drawing.Point(293, 37);
             this.lbl_joueur1.Name = "lbl_joueur1";
             this.lbl_joueur1.Size = new System.Drawing.Size(45, 13);
             this.lbl_joueur1.TabIndex = 15;
@@ -221,7 +221,7 @@
             // lbl_Joueur2
             // 
             this.lbl_Joueur2.AutoSize = true;
-            this.lbl_Joueur2.Location = new System.Drawing.Point(357, 101);
+            this.lbl_Joueur2.Location = new System.Drawing.Point(293, 101);
             this.lbl_Joueur2.Name = "lbl_Joueur2";
             this.lbl_Joueur2.Size = new System.Drawing.Size(45, 13);
             this.lbl_Joueur2.TabIndex = 16;
@@ -230,7 +230,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(403, 12);
+            this.label2.Location = new System.Drawing.Point(339, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 23;
@@ -242,7 +242,7 @@
             this.btn_o1.Enabled = false;
             this.btn_o1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_o1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_o1.Location = new System.Drawing.Point(360, 58);
+            this.btn_o1.Location = new System.Drawing.Point(296, 58);
             this.btn_o1.Name = "btn_o1";
             this.btn_o1.Size = new System.Drawing.Size(33, 33);
             this.btn_o1.TabIndex = 27;
@@ -255,7 +255,7 @@
             this.btn_j1.Enabled = false;
             this.btn_j1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_j1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_j1.Location = new System.Drawing.Point(392, 58);
+            this.btn_j1.Location = new System.Drawing.Point(328, 58);
             this.btn_j1.Name = "btn_j1";
             this.btn_j1.Size = new System.Drawing.Size(33, 33);
             this.btn_j1.TabIndex = 28;
@@ -268,7 +268,7 @@
             this.btn_b1.Enabled = false;
             this.btn_b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_b1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_b1.Location = new System.Drawing.Point(424, 58);
+            this.btn_b1.Location = new System.Drawing.Point(360, 58);
             this.btn_b1.Name = "btn_b1";
             this.btn_b1.Size = new System.Drawing.Size(33, 33);
             this.btn_b1.TabIndex = 29;
@@ -281,7 +281,7 @@
             this.btn_m1.Enabled = false;
             this.btn_m1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_m1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_m1.Location = new System.Drawing.Point(456, 58);
+            this.btn_m1.Location = new System.Drawing.Point(392, 58);
             this.btn_m1.Name = "btn_m1";
             this.btn_m1.Size = new System.Drawing.Size(33, 33);
             this.btn_m1.TabIndex = 30;
@@ -294,7 +294,7 @@
             this.btn_m2.Enabled = false;
             this.btn_m2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_m2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_m2.Location = new System.Drawing.Point(456, 125);
+            this.btn_m2.Location = new System.Drawing.Point(392, 125);
             this.btn_m2.Name = "btn_m2";
             this.btn_m2.Size = new System.Drawing.Size(33, 33);
             this.btn_m2.TabIndex = 34;
@@ -307,7 +307,7 @@
             this.btn_b2.Enabled = false;
             this.btn_b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_b2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_b2.Location = new System.Drawing.Point(424, 125);
+            this.btn_b2.Location = new System.Drawing.Point(360, 125);
             this.btn_b2.Name = "btn_b2";
             this.btn_b2.Size = new System.Drawing.Size(33, 33);
             this.btn_b2.TabIndex = 33;
@@ -320,7 +320,7 @@
             this.btn_j2.Enabled = false;
             this.btn_j2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_j2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_j2.Location = new System.Drawing.Point(392, 125);
+            this.btn_j2.Location = new System.Drawing.Point(328, 125);
             this.btn_j2.Name = "btn_j2";
             this.btn_j2.Size = new System.Drawing.Size(33, 33);
             this.btn_j2.TabIndex = 32;
@@ -333,7 +333,7 @@
             this.btn_o2.Enabled = false;
             this.btn_o2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_o2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_o2.Location = new System.Drawing.Point(360, 125);
+            this.btn_o2.Location = new System.Drawing.Point(296, 125);
             this.btn_o2.Name = "btn_o2";
             this.btn_o2.Size = new System.Drawing.Size(33, 33);
             this.btn_o2.TabIndex = 31;
@@ -345,26 +345,27 @@
             this.lbl_question.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_question.Location = new System.Drawing.Point(0, 0);
             this.lbl_question.Name = "lbl_question";
-            this.lbl_question.Size = new System.Drawing.Size(800, 510);
+            this.lbl_question.Size = new System.Drawing.Size(620, 448);
             this.lbl_question.TabIndex = 35;
             this.lbl_question.Text = "Question:";
             this.lbl_question.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_test
+            // lbl_winner
             // 
-            this.lbl_test.AutoSize = true;
-            this.lbl_test.Location = new System.Drawing.Point(539, 209);
-            this.lbl_test.Name = "lbl_test";
-            this.lbl_test.Size = new System.Drawing.Size(35, 13);
-            this.lbl_test.TabIndex = 36;
-            this.lbl_test.Text = "label1";
+            this.lbl_winner.AutoSize = true;
+            this.lbl_winner.Location = new System.Drawing.Point(23, 231);
+            this.lbl_winner.Name = "lbl_winner";
+            this.lbl_winner.Size = new System.Drawing.Size(84, 13);
+            this.lbl_winner.TabIndex = 36;
+            this.lbl_winner.Text = "Le gagnant est :";
+            this.lbl_winner.Visible = false;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 510);
-            this.Controls.Add(this.lbl_test);
+            this.ClientSize = new System.Drawing.Size(620, 448);
+            this.Controls.Add(this.lbl_winner);
             this.Controls.Add(this.btn_m2);
             this.Controls.Add(this.btn_b2);
             this.Controls.Add(this.btn_j2);
@@ -430,6 +431,6 @@
         private System.Windows.Forms.Button btn_j2;
         private System.Windows.Forms.Button btn_o2;
         private System.Windows.Forms.Label lbl_question;
-        private System.Windows.Forms.Label lbl_test;
+        private System.Windows.Forms.Label lbl_winner;
     }
 }

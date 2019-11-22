@@ -39,6 +39,8 @@
             this.cmb_joueur2 = new System.Windows.Forms.ComboBox();
             this.lbl_erreur = new System.Windows.Forms.Label();
             this.btn_deleteJoueur = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_start
@@ -74,23 +76,21 @@
             // 
             // txt_motDePasse
             // 
-            this.txt_motDePasse.Location = new System.Drawing.Point(461, 78);
+            this.txt_motDePasse.Location = new System.Drawing.Point(461, 105);
             this.txt_motDePasse.Margin = new System.Windows.Forms.Padding(6);
             this.txt_motDePasse.Name = "txt_motDePasse";
             this.txt_motDePasse.PasswordChar = '•';
             this.txt_motDePasse.Size = new System.Drawing.Size(90, 29);
             this.txt_motDePasse.TabIndex = 7;
-            this.txt_motDePasse.Text = "12";
             this.txt_motDePasse.Visible = false;
             // 
             // txt_compte
             // 
-            this.txt_compte.Location = new System.Drawing.Point(461, 105);
+            this.txt_compte.Location = new System.Drawing.Point(461, 76);
             this.txt_compte.Margin = new System.Windows.Forms.Padding(6);
             this.txt_compte.Name = "txt_compte";
             this.txt_compte.Size = new System.Drawing.Size(90, 29);
             this.txt_compte.TabIndex = 8;
-            this.txt_compte.Text = "bigbinotte";
             this.txt_compte.Visible = false;
             // 
             // btn_addJoueur
@@ -144,12 +144,34 @@
             this.btn_deleteJoueur.UseVisualStyleBackColor = true;
             this.btn_deleteJoueur.Click += new System.EventHandler(this.btn_deleteJoueur_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(379, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 24);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "compte";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(391, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 24);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "mdp";
+            this.label4.Visible = false;
+            // 
             // Form1
             // 
             this.AcceptButton = this.btn_start;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 287);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_deleteJoueur);
             this.Controls.Add(this.lbl_erreur);
             this.Controls.Add(this.cmb_joueur2);
@@ -185,6 +207,8 @@
         private System.Windows.Forms.ComboBox cmb_joueur2;
         private System.Windows.Forms.Label lbl_erreur;
         private System.Windows.Forms.Button btn_deleteJoueur;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

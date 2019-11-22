@@ -12,7 +12,6 @@ namespace TrivialPursuit
         string _nomOrdi;
         public static SqlConnection conn = new SqlConnection();
 
-
         public Form1()
         {
             InitializeComponent();
@@ -57,6 +56,12 @@ namespace TrivialPursuit
             this.Hide();
             deleteJoueur.ShowDialog();
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         public void ShowJoueurs()
         {
             string getJoueurs = $"select Alias from Joueurs;";
@@ -79,6 +84,7 @@ namespace TrivialPursuit
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void ConnectionBD()
         {
             string source = $"{_nomOrdi}\\SQLEXPRESS";
@@ -91,11 +97,6 @@ namespace TrivialPursuit
             conn.Open();
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void RestartGame()
         {
             SqlCommand restartGame = new SqlCommand("restartGame", Form1.conn);
@@ -104,6 +105,5 @@ namespace TrivialPursuit
 
             restartGame.ExecuteNonQuery();
         }
-
     }
 }

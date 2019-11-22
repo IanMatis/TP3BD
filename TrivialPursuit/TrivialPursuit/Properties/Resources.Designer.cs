@@ -10,8 +10,9 @@
 
 namespace TrivialPursuit.Properties {
     using System;
-    
-    
+    using System.Collections.Generic;
+
+
     /// <summary>
     ///   Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
     /// </summary>
@@ -78,6 +79,11 @@ namespace TrivialPursuit.Properties {
                 object obj = ResourceManager.GetObject("TrivialPursuit", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
+        }
+
+        internal static IEnumerable<object> OfType<T>()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -7,10 +7,6 @@ namespace TrivialPursuit
 {
     public partial class frm_ajouter : Form
     {
-        public frm_ajouter()
-        {
-            InitializeComponent();
-        }
 
         private void btn_ajouter_Click(object sender, EventArgs e)
         {
@@ -30,9 +26,19 @@ namespace TrivialPursuit
             }
         }
 
+        private void frm_ajouter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReloadForm();
+        }
+
+        public frm_ajouter()
+        {
+            InitializeComponent();
+        }
+
         private void AjouterJoueur(string alias, string nom, string prenom)
         {
-            
+
             SqlCommand ajouterJoueur = new SqlCommand("insertJoueur", Form1.conn);
             ajouterJoueur.CommandText = "insertJoueur";
             ajouterJoueur.CommandType = CommandType.StoredProcedure;
@@ -43,7 +49,7 @@ namespace TrivialPursuit
             paramNom.Direction = ParameterDirection.Input;
             SqlParameter paramPrn = new SqlParameter("@prenom", SqlDbType.VarChar, 60);
             paramPrn.Direction = ParameterDirection.Input;
-            
+
 
             paramAlias.Value = alias;
             paramNom.Value = nom;
@@ -56,11 +62,6 @@ namespace TrivialPursuit
 
 
             //totalEtudiants();//refresh le total d'etudiants apres un ajout
-        }
-
-        private void frm_ajouter_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            ReloadForm();
         }
 
         private void ReloadForm()

@@ -3,10 +3,13 @@ use TrivialPursuitBD;
 drop procedure if exists insertJoueur;
 drop procedure if exists chercherQuestion;
 drop procedure if exists chercherReponse;
-drop procedure if exists validerReponse;
+drop function  if exists validerReponse;
 drop procedure if exists mettreAJourScore;
 drop procedure if exists afficherCategorieGagne;
 drop procedure if exists afficherCatPlusFaible;
+drop procedure if exists deleteJoueur;
+drop function  if exists getIdJoueur;
+drop procedure if exists restartGame;
 go
 
 --Cree le joueur et son tableau de score en meme temps
@@ -124,7 +127,7 @@ end;
 go
 
 --Reset les score et les flags des reponses
-create procedure restartGame
+create procedure	
 as
 begin
 	update Score set nbBonneReponses = 0;

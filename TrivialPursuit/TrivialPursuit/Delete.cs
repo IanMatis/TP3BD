@@ -13,11 +13,6 @@ namespace TrivialPursuit
 {
     public partial class frm_delete : Form
     {
-        public frm_delete()
-        {
-            InitializeComponent();
-        }
-
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (cmb_alias.Text != "")
@@ -47,6 +42,11 @@ namespace TrivialPursuit
         {
             this.Hide();
             ReloadForm();
+        }
+
+        public frm_delete()
+        {
+            InitializeComponent();
         }
 
         private void ReloadForm()

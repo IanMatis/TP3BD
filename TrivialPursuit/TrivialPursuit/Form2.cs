@@ -13,6 +13,7 @@ namespace TrivialPursuit
             InitializeComponent();
         }
 
+        const int pointGagner = 3;
         Random r = new Random();
         int tourJoueur = 1;
         int catChoisi;
@@ -73,6 +74,24 @@ namespace TrivialPursuit
             DisableButtonsCategorie();
             idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
+        }
+
+        private void btn_reponses(object sender, EventArgs e)
+        {
+            DisableButtonsCategorie();
+            Button clicked = (Button)sender;
+            string nomBoutton = clicked.Name;
+            int reponse = RetourReponse(nomBoutton);
+            UpdateScore(reponse);
+            TourJoueur(reponse);
+
+            if (reponse == 1)
+                AjouterPoint();
+
+            catChoisi = ChercherCategorie();
+            idQuestion = ChercherQuestion(catChoisi);
+            ChercherReponses(idQuestion);
+            Gagner();
         }
 
         private void DisableButtonsCategorie()
@@ -154,19 +173,20 @@ namespace TrivialPursuit
 
         private void TourJoueur(int reponse)
         {
+            if (reponse == 0 && tourJoueur == 1)
+                tourJoueur = 2;
+            else if (reponse == 0 && tourJoueur == 2)
+                tourJoueur = 1;
+
             if (tourJoueur == 1)
             {
                 lbl_tourJoueur.Text = "Tour de: " + Form1.Joueur1;
                 idJoueurTour = idJoueur1;
-                if (reponse == 0)
-                    tourJoueur = 2;
             }
             else if (tourJoueur == 2)
             {
                 lbl_tourJoueur.Text = "Tour de: " + Form1.Joueur2;
                 idJoueurTour = idJoueur2;
-                if(reponse == 0)
-                    tourJoueur = 1;
             }
         }
 
@@ -199,21 +219,7 @@ namespace TrivialPursuit
             }
             reader.Close();
         }
-
-        private void btn_reponses(object sender, EventArgs e)
-        {
-            DisableButtonsCategorie();
-            Button clicked = (Button)sender;
-            string nomBoutton = clicked.Name;
-            int reponse = RetourReponse(nomBoutton);
-            UpdateScore(reponse);
-            TourJoueur(reponse);
-
-            catChoisi = ChercherCategorie();
-            idQuestion = ChercherQuestion(catChoisi);
-            ChercherReponses(idQuestion);
-        }
-
+               
         private int RetourReponse(string nomBoutton)
         {
             int reponseSelected = BouttonSelected(nomBoutton);
@@ -298,5 +304,95 @@ namespace TrivialPursuit
                 throw new Exception(e.Message);
             }
         }
+
+        private void AjouterPoint()
+        {
+            int point;
+            if (catChoisi == 1 && idJoueur1 == idJoueurTour)
+            {
+                point = int.Parse(btn_o1.Text);
+                point++;
+                btn_o1.Text = point.ToString();
+            }
+            else if (catChoisi == 2 && idJoueur1 == idJoueurTour)
+            {
+                point = int.Parse(btn_j1.Text);
+                point++;
+                btn_j1.Text = point.ToString();
+            }
+            else if (catChoisi == 3 && idJoueur1 == idJoueurTour)
+            {
+                point = int.Parse(btn_b1.Text);
+                point++;
+                btn_b1.Text = point.ToString();
+            }
+            else if (catChoisi == 4 && idJoueur1 == idJoueurTour)
+            {
+                point = int.Parse(btn_m1.Text);
+                point++;
+                btn_m1.Text = point.ToString();
+            }
+            else if (catChoisi == 1 && idJoueur2 == idJoueurTour)
+            {
+                point = int.Parse(btn_o2.Text);
+                point++;
+                btn_o2.Text = point.ToString();
+            }
+            else if (catChoisi == 2 && idJoueur2 == idJoueurTour)
+            {
+                point = int.Parse(btn_j2.Text);
+                point++;
+                btn_j2.Text = point.ToString();
+            }
+            else if (catChoisi == 3 && idJoueur2 == idJoueurTour)
+            {
+                point = int.Parse(btn_b2.Text);
+                point++;
+                btn_b2.Text = point.ToString();
+            }
+            else if (catChoisi == 4 && idJoueur2 == idJoueurTour)
+            {
+                point = int.Parse(btn_m2.Text);
+                point++;
+                btn_m2.Text = point.ToString();
+            }
+        }
+
+        private void Gagner()
+        {
+            int pOrange1 = int.Parse(btn_o1.Text);
+            int pJaune1 = int.Parse(btn_j1.Text);
+            int pBleu1 = int.Parse(btn_b1.Text);
+            int pMauve1 = int.Parse(btn_m1.Text);
+
+            int pOrange2 = int.Parse(btn_o2.Text);
+            int pJaune2 = int.Parse(btn_j2.Text);
+            int pBleu2 = int.Parse(btn_b2.Text);
+            int pMauve2 = int.Parse(btn_m2.Text);
+
+            if (pOrange1 >= pointGagner && pJaune1 >= pointGagner && 
+                pBleu1 >= pointGagner && pMauve1 >= pointGagner)
+            {
+                lbl_winner.Text += Form1.Joueur1;
+                lbl_winner.Show();
+                DisableReponses();
+            }
+            else if (pOrange2 >= pointGagner && pJaune2 >= pointGagner &&
+                     pBleu2 >= pointGagner && pMauve2 >= pointGagner)
+            {
+                lbl_winner.Text += Form1.Joueur2;
+                lbl_winner.Show();
+                DisableReponses();
+            }
+        }
+
+        private void DisableReponses()
+        {
+            btn_rep1.Enabled = false;
+            btn_rep2.Enabled = false;
+            btn_rep3.Enabled = false;
+            btn_rep4.Enabled = false;
+        }
+
     }
 }
