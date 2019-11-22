@@ -22,7 +22,7 @@ namespace TrivialPursuit
         {
             Joueur1 = cmb_joueur1.Text;
             Joueur2 = cmb_joueur2.Text;
-            if (Joueur1 != "" && Joueur2 != "")
+            if (Joueur1 != "" && Joueur2 != "" || cmb_joueur1.Text == cmb_joueur2.Text)
             {
                 this.Hide();
                 Form2 form2 = new Form2();
@@ -94,7 +94,6 @@ namespace TrivialPursuit
         {
             Application.Exit();
         }
-
 
     }
 }

@@ -78,6 +78,16 @@ end;
 
 go
 
+create function getIdJoueur(@alias varchar(60)) returns int
+as 
+begin
+	declare @idJoueur int = 0;
+	select @idJoueur = idJoueur from Joueurs where Alias = @alias;
+	return @idJoueur;
+end;
+
+go
+
 --@reponse est la valeur que la fonction validerReponse retourne
 create procedure mettreAJourScore(@reponse int,@idJoueur int,@idCategorie int)
 as 
@@ -150,6 +160,7 @@ execute chercherReponse
 --31   1
 --marche meme si cest rouge
 select dbo.validerReponse(11) as Etat;
+*/select dbo.getIdJoueur('Big Binotte'); /*
 
 --Test mettreAJourScore
 execute mettreAJourScore

@@ -55,6 +55,7 @@
             this.btn_j2 = new System.Windows.Forms.Button();
             this.btn_o2 = new System.Windows.Forms.Button();
             this.lbl_question = new System.Windows.Forms.Label();
+            this.lbl_test = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_play
@@ -345,11 +346,21 @@
             this.lbl_question.Text = "Question:";
             this.lbl_question.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_test
+            // 
+            this.lbl_test.AutoSize = true;
+            this.lbl_test.Location = new System.Drawing.Point(539, 209);
+            this.lbl_test.Name = "lbl_test";
+            this.lbl_test.Size = new System.Drawing.Size(35, 13);
+            this.lbl_test.TabIndex = 36;
+            this.lbl_test.Text = "label1";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.lbl_test);
             this.Controls.Add(this.btn_m2);
             this.Controls.Add(this.btn_b2);
             this.Controls.Add(this.btn_j2);
@@ -415,5 +426,6 @@
         private System.Windows.Forms.Button btn_j2;
         private System.Windows.Forms.Button btn_o2;
         private System.Windows.Forms.Label lbl_question;
+        private System.Windows.Forms.Label lbl_test;
     }
 }

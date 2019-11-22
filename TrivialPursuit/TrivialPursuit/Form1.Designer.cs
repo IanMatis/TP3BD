@@ -129,9 +129,9 @@
             this.lbl_erreur.ForeColor = System.Drawing.Color.Red;
             this.lbl_erreur.Location = new System.Drawing.Point(366, 26);
             this.lbl_erreur.Name = "lbl_erreur";
-            this.lbl_erreur.Size = new System.Drawing.Size(160, 48);
+            this.lbl_erreur.Size = new System.Drawing.Size(175, 48);
             this.lbl_erreur.TabIndex = 12;
-            this.lbl_erreur.Text = "Vous devez avoir \r\n2 joueurs\r\n";
+            this.lbl_erreur.Text = "Vous devez avoir 2 \r\njoueurs identiques\r\n";
             this.lbl_erreur.Visible = false;
             // 
             // btn_deleteJoueur

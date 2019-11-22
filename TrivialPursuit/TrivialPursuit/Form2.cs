@@ -17,11 +17,14 @@ namespace TrivialPursuit
         int tourJoueur = 1;
         int catChoisi;
         int idQuestion;
+        int idJoueur1;
+        int idJoueur2;
+        int idJoueurTour;
 
         private void btn_play_Click(object sender, EventArgs e)
         {
             btn_play.Visible = false;
-            TourJoueur();
+            TourJoueur(1);
             catChoisi = ChercherCategorie();
             idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
@@ -93,6 +96,9 @@ namespace TrivialPursuit
         {
             lbl_joueur1.Text = Form1.Joueur1;
             lbl_Joueur2.Text = Form1.Joueur2;
+            idJoueur1 = GetIdJoueur(Form1.Joueur1);
+            idJoueur2 = GetIdJoueur(Form1.Joueur2);
+            idJoueurTour = idJoueur1;
         }
 
         private int ChercherQuestion(int catChoisi)
@@ -144,19 +150,22 @@ namespace TrivialPursuit
             return couleur;
         }
 
-        private void TourJoueur()
+        private void TourJoueur(int reponse)
         {
             if (tourJoueur == 1)
             {
                 lbl_tourJoueur.Text = "Tour de: " + Form1.Joueur1;
-                tourJoueur = 2;
+                idJoueurTour = idJoueur1;
+                if (reponse == 0)
+                    tourJoueur = 2;
             }
             else if (tourJoueur == 2)
             {
                 lbl_tourJoueur.Text = "Tour de: " + Form1.Joueur2;
-                tourJoueur = 1;
+                idJoueurTour = idJoueur2;
+                if(reponse == 0)
+                    tourJoueur = 1;
             }
-            SqlConnection conn = Form1.conn;
         }
 
         private void ChercherReponses(int idQuestion)
@@ -193,7 +202,98 @@ namespace TrivialPursuit
         {
             Button clicked = (Button)sender;
             string nomBoutton = clicked.Name;
+            int reponse = RetourReponse(nomBoutton);
+            UpdateScore(reponse);
+            TourJoueur(reponse);
 
+            catChoisi = ChercherCategorie();
+            idQuestion = ChercherQuestion(catChoisi);
+            ChercherReponses(idQuestion);
+        }
+
+        private int RetourReponse(string nomBoutton)
+        {
+            int reponseSelected = BouttonSelected(nomBoutton);
+            string reponse = $"select dbo.validerReponse({reponseSelected});";
+            int bonneReponse = 0;
+
+            try
+            {
+                SqlCommand selectReponse = new SqlCommand(reponse, Form1.conn);
+                selectReponse.CommandText = reponse;
+                selectReponse.CommandType = CommandType.Text;
+
+                SqlDataReader reader = selectReponse.ExecuteReader();
+                reader.Read();
+                bonneReponse = reader.GetInt32(0);
+                reader.Close();
+                return bonneReponse;
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        private int BouttonSelected(string nomBoutton)
+        {
+            int bouttonSelected = 0;
+
+            if (nomBoutton == btn_rep1.Name)
+                bouttonSelected = idQuestion * 4 - 3;
+            else if (nomBoutton == btn_rep2.Name)
+                bouttonSelected = idQuestion * 4 - 2;
+            else if (nomBoutton == btn_rep3.Name)
+                bouttonSelected = idQuestion * 4 - 1;
+            else
+                bouttonSelected = idQuestion * 4;
+            return bouttonSelected;
+        }
+
+        private void UpdateScore(int reponse)
+        {
+            SqlCommand updateScore = new SqlCommand("mettreAJourScore", Form1.conn);
+            updateScore.CommandText = "mettreAJourScore";
+            updateScore.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter paramReponse = new SqlParameter("@reponse", SqlDbType.Int);
+            paramReponse.Direction = ParameterDirection.Input;
+            SqlParameter paramJoueur = new SqlParameter("@idJoueur", SqlDbType.Int);
+            paramJoueur.Direction = ParameterDirection.Input;
+            SqlParameter paramCategorie = new SqlParameter("@idCategorie", SqlDbType.Int);
+            paramCategorie.Direction = ParameterDirection.Input;
+
+
+            paramReponse.Value = reponse;
+            paramJoueur.Value = idJoueurTour;
+            paramCategorie.Value = catChoisi;
+
+            updateScore.Parameters.Add(paramReponse);
+            updateScore.Parameters.Add(paramJoueur);
+            updateScore.Parameters.Add(paramCategorie);
+            updateScore.ExecuteNonQuery();
+        }
+
+        private int GetIdJoueur(string alias)
+        {
+            string reponse = $"select dbo.getIdJoueur('{alias}');";
+            int idJoueur = 0;
+            try
+            {
+                SqlCommand selectId = new SqlCommand(reponse, Form1.conn);
+                selectId.CommandText = reponse;
+                selectId.CommandType = CommandType.Text;
+
+                SqlDataReader reader = selectId.ExecuteReader();
+                reader.Read();
+                idJoueur = reader.GetInt32(0);
+                reader.Close();
+                return idJoueur;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }
