@@ -114,5 +114,8 @@
   <ItemGroup>
     <None Include="Resources\TrivialPursuit.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nez1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

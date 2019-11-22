@@ -59,11 +59,11 @@
             // 
             // btn_play
             // 
-            this.btn_play.Location = new System.Drawing.Point(677, 12);
+            this.btn_play.Location = new System.Drawing.Point(678, 12);
             this.btn_play.Name = "btn_play";
             this.btn_play.Size = new System.Drawing.Size(99, 87);
             this.btn_play.TabIndex = 0;
-            this.btn_play.Text = "Play";
+            this.btn_play.Text = "Start";
             this.btn_play.UseVisualStyleBackColor = true;
             this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
             // 
