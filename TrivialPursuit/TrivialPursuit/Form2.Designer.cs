@@ -79,6 +79,7 @@
             // 
             // btn_sport
             // 
+            this.btn_sport.BackColor = System.Drawing.Color.White;
             this.btn_sport.Enabled = false;
             this.btn_sport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_sport.Location = new System.Drawing.Point(7, 33);
@@ -86,11 +87,12 @@
             this.btn_sport.Size = new System.Drawing.Size(170, 33);
             this.btn_sport.TabIndex = 2;
             this.btn_sport.Text = "Sport";
-            this.btn_sport.UseVisualStyleBackColor = true;
+            this.btn_sport.UseVisualStyleBackColor = false;
             this.btn_sport.Click += new System.EventHandler(this.btn_sport_Click);
             // 
             // btn_anime
             // 
+            this.btn_anime.BackColor = System.Drawing.Color.White;
             this.btn_anime.Enabled = false;
             this.btn_anime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_anime.Location = new System.Drawing.Point(7, 64);
@@ -98,11 +100,12 @@
             this.btn_anime.Size = new System.Drawing.Size(170, 33);
             this.btn_anime.TabIndex = 3;
             this.btn_anime.Text = "Anime";
-            this.btn_anime.UseVisualStyleBackColor = true;
+            this.btn_anime.UseVisualStyleBackColor = false;
             this.btn_anime.Click += new System.EventHandler(this.btn_anime_Click);
             // 
             // btn_jeuxVideo
             // 
+            this.btn_jeuxVideo.BackColor = System.Drawing.Color.White;
             this.btn_jeuxVideo.Enabled = false;
             this.btn_jeuxVideo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_jeuxVideo.Location = new System.Drawing.Point(7, 94);
@@ -110,11 +113,12 @@
             this.btn_jeuxVideo.Size = new System.Drawing.Size(170, 33);
             this.btn_jeuxVideo.TabIndex = 4;
             this.btn_jeuxVideo.Text = "Jeux Video";
-            this.btn_jeuxVideo.UseVisualStyleBackColor = true;
+            this.btn_jeuxVideo.UseVisualStyleBackColor = false;
             this.btn_jeuxVideo.Click += new System.EventHandler(this.btn_jeuxVideo_Click);
             // 
             // btn_animaux
             // 
+            this.btn_animaux.BackColor = System.Drawing.Color.White;
             this.btn_animaux.Enabled = false;
             this.btn_animaux.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_animaux.Location = new System.Drawing.Point(7, 125);
@@ -122,7 +126,7 @@
             this.btn_animaux.Size = new System.Drawing.Size(170, 33);
             this.btn_animaux.TabIndex = 5;
             this.btn_animaux.Text = "Animaux";
-            this.btn_animaux.UseVisualStyleBackColor = true;
+            this.btn_animaux.UseVisualStyleBackColor = false;
             this.btn_animaux.Click += new System.EventHandler(this.btn_animaux_Click);
             // 
             // btn_orange

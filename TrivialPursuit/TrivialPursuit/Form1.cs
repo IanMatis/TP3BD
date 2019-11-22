@@ -41,6 +41,7 @@ namespace TrivialPursuit
             _nomOrdi = Environment.MachineName;
             ConnectionBD();
             ShowJoueurs();
+            RestartGame();
         }
 
         private void btn_addJoueur_Click(object sender, EventArgs e)
@@ -93,6 +94,15 @@ namespace TrivialPursuit
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void RestartGame()
+        {
+            SqlCommand restartGame = new SqlCommand("restartGame", Form1.conn);
+            restartGame.CommandText = "restartGame";
+            restartGame.CommandType = CommandType.StoredProcedure;
+
+            restartGame.ExecuteNonQuery();
         }
 
     }

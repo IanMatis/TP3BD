@@ -24,7 +24,6 @@ namespace TrivialPursuit
         private void btn_play_Click(object sender, EventArgs e)
         {
             btn_play.Visible = false;
-            TourJoueur(1);
             catChoisi = ChercherCategorie();
             idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
@@ -45,7 +44,7 @@ namespace TrivialPursuit
             catChoisi = 1;
             btn_sport.BackColor = Color.Orange;
             DisableButtonsCategorie();
-            ChercherQuestion(catChoisi);
+            idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
         }
 
@@ -54,7 +53,7 @@ namespace TrivialPursuit
             catChoisi = 2;
             btn_anime.BackColor = Color.Yellow;
             DisableButtonsCategorie();
-            ChercherQuestion(catChoisi);
+            idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
         }
 
@@ -63,7 +62,7 @@ namespace TrivialPursuit
             catChoisi = 3;
             btn_jeuxVideo.BackColor = Color.Blue;
             DisableButtonsCategorie();
-            ChercherQuestion(catChoisi);
+            idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
         }
 
@@ -72,16 +71,20 @@ namespace TrivialPursuit
             catChoisi = 4;
             btn_animaux.BackColor = Color.Purple;
             DisableButtonsCategorie();
-            ChercherQuestion(catChoisi);
+            idQuestion = ChercherQuestion(catChoisi);
             ChercherReponses(idQuestion);
         }
 
         private void DisableButtonsCategorie()
         {
             btn_animaux.Enabled = false;
+            btn_animaux.BackColor = Color.White;
             btn_anime.Enabled = false;
+            btn_anime.BackColor = Color.White;
             btn_jeuxVideo.Enabled = false;
+            btn_jeuxVideo.BackColor = Color.White;
             btn_sport.Enabled = false;
+            btn_sport.BackColor = Color.White;
         }
 
         private void EnableButtonsCategorie()
@@ -115,7 +118,6 @@ namespace TrivialPursuit
 
 
             SqlDataReader reader = chercherQuestion.ExecuteReader();
-
             while (reader.Read())
             {
                 lbl_question.Text = reader.GetString(1);
@@ -200,6 +202,7 @@ namespace TrivialPursuit
 
         private void btn_reponses(object sender, EventArgs e)
         {
+            DisableButtonsCategorie();
             Button clicked = (Button)sender;
             string nomBoutton = clicked.Name;
             int reponse = RetourReponse(nomBoutton);
