@@ -82,6 +82,7 @@
             this.txt_motDePasse.PasswordChar = '•';
             this.txt_motDePasse.Size = new System.Drawing.Size(90, 29);
             this.txt_motDePasse.TabIndex = 7;
+            this.txt_motDePasse.Text = "12";
             this.txt_motDePasse.Visible = false;
             // 
             // txt_compte
@@ -91,6 +92,7 @@
             this.txt_compte.Name = "txt_compte";
             this.txt_compte.Size = new System.Drawing.Size(90, 29);
             this.txt_compte.TabIndex = 8;
+            this.txt_compte.Text = "bigbinotte";
             this.txt_compte.Visible = false;
             // 
             // btn_addJoueur

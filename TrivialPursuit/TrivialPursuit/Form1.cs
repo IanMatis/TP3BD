@@ -87,7 +87,7 @@ namespace TrivialPursuit
 
         private void ConnectionBD()
         {
-            string source = $"{_nomOrdi}\\SQLEXPRESS";
+            string source = $"{_nomOrdi}\\SQLEXPRESS2017";
             string bd = "TrivialPursuitBD";
             string user = txt_compte.Text;
             string pw = txt_motDePasse.Text;

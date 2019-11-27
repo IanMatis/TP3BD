@@ -23,4 +23,3 @@ H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialP
 H:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.pdb
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.frm_delete.resources
 F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.frm_ajouter.resources
-F:\Cegep\Session3\Prog_BD\TP3BD\TrivialPursuit\TrivialPursuit\obj\Debug\TrivialPursuit.csproj.CoreCompileInputs.cache
